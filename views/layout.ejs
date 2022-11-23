@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav class="nav_bar">
+        <ul class="nav_links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <a href="/"><img src="/images/wallet.png" alt=""></a>
+        
+        
+        <ul class="nav_btns" >
+            <%if(login_status){%>
+            <li><a href="/Dashboard" class="btn btn_blue">Dashboard</a></li>
+            <li><a href="/logout" class="btn btn_blue_brd">Logout <i class="fas fa-sign-out" style="margin-left: 10px;"></i></a></li>
+            <%} else { %>
+                <li><a href="/login" class="btn btn_blue">Login</a></li>
+                <li><a href="/register" class="btn btn_blue_brd">Register</a></li>
+            <% } %>
+        </ul>
+
+        <h1 class="menu"><i class="fas fa-bars"></i></h1>
+    </nav>
+    <%- body %>
+    <!-- <footer>
+        <p class="footer_text">All rights are reserverd @2022 G INC</p>
+        
+    </footer> -->
+</body>
+</html>
